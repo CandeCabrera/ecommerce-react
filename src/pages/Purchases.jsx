@@ -25,7 +25,6 @@ const Purchases = () => {
     return created.toLocaleDateString("en-US", options);
   };
 
-
   return (
     <div className="purchases-container">
       <h2>YOUR PURCHASES</h2>

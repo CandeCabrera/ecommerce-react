@@ -32,10 +32,16 @@ const ProductDetail = () => {
     quantity: rate
 }
   const addToCart = ()=>{
-    alert(rate)
     dispatch(postCartItems(productSelected))
   }
 
+  const decrementUnits = ()=>{
+    if (rate >= 2) {
+     setRate(rate -1)
+    } else {
+      setRate(1)
+    }
+  }
 
 
   return (
@@ -78,7 +84,7 @@ const ProductDetail = () => {
 
           <div className="add-product-to-cart">
             <div className="counter-container">
-              <button className="plus-minus" onClick={()=> setRate(rate -1)}>-</button>
+              <button className="plus-minus" onClick={decrementUnits}>-</button>
               <p>{rate}</p>
               <button className="plus-minus" onClick={()=> setRate(rate +1)}>+</button>
             </div>

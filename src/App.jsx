@@ -23,7 +23,7 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+ 
       <HashRouter>
         <NavBar />
         {isLoading && <Loader />}
@@ -45,7 +45,7 @@ function App() {
       
         </footer>
       </HashRouter>
-    </div>
+  
   );
 }
 

@@ -19,6 +19,8 @@ const Cart = ({ show, handleClose }) => {
 
   const checkout = ()=>{
     dispatch(purchaseCartCheckout())
+    navigate('/purchases')
+    handleClose()
   }
 
   const deleteItem = (id) =>{
